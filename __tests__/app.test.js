@@ -12,19 +12,26 @@ describe('app routes', () => {
   });
   it('it gets color red from /red', async () => {
     const res = await request(app).get('/red');
-    expect(res.text).toEqual('<h1>red<h1>');
+    expect(res.text).toEqual('<h1>red</h1>');
   });
   it('it gets color red from /green', async () => {
     const res = await request(app).get('/green');
-    expect(res.text).toEqual('<h1>green<h1>');
+    expect(res.text).toEqual('<h1>green</h1>');
   });
   it('it gets color red from /blue', async () => {
     const res = await request(app).get('/blue');
-    expect(res.text).toEqual('<h1>blue<h1>');
+    expect(res.text).toEqual('<h1>blue</h1>');
   });
 
 
-
-
-
 });
+
+describe('app routes', () => {
+  test('/index.html, GET content from index.html file under public directory', async () => {
+
+    const res = await request(app)
+      .get('/index.html');
+
+    expect(res.text).toEqual('<h1>WHATTTTUPPPP!</h1>');
+  });
+}

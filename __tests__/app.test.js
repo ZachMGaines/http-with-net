@@ -32,6 +32,6 @@ describe('app routes', () => {
     const res = await request(app)
       .get('/index.html');
 
-    expect(res.text).toEqual('<h1>WHATTTTUPPPP!</h1>');
+    expect(res.text).toEqual('<div>WHATTTTUPPPP!</div>');
   });
-}
+});
